@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style/style.css">
+  <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+</head>
+<body>
+  <main>
+    <article class="sign-up-sheet page">
+      <picture>
+        <source media="(min-width: 30rem)"
+          srcset="./assets/images/illustration-sign-up-desktop.svg">
+        <img class="sign-up-image" 
+        src="./assets/images/illustration-sign-up-mobile.svg"
+        alt="The illustration of the sign up sheet">
+      </picture>
+      <div class="text-container">
+        <h1 class="title">Stay updated!</h1>
+        <p class="intro">Join 60,000+ product managers receiving monthly updates on:</p>
+        <ul class="benefit-list">
+          <li>Product discovery and building what matters</li>
+          <li>Measuring to ensure updates are a success</li>
+          <li>And much more!</li>
+        </ul>
+        <div class="submit-place">
+          <div class="prompt-part">
+            <span class="input-type-require">Email address</span>
+            <span class="error-text" id="error-message" >Valid email required</span>
+          </div>
+          <input class="input-box" id="email-input" type="email" name="email" placeholder="email@company.com" required>
+          <button id="submit-button" 
+            class="click-button submit" 
+            type="button" 
+            aria-label="the submit button for the sign-up sheet">
+            Subscribe to monthly newsletter
+          </button>
+        </div>
+      </div>
+    </article>
+    <article class="success-page page hidden">
+      <img class="icon-success" 
+        src="./assets/images/icon-success.svg"
+        alt="The the icon of success">
+      <h2 success-title>Thanks for subscribing!</h2>
+      <p class="confirm-message">
+        A confirmation email has been sent to ash@loremcompany.com. Please open it and click the button inside to confirm your subscription.
+      </p>
+      <button id="dismiss-button" 
+          class="click-button dismiss" 
+          type="button" 
+          aria-label="the button to dismiss the confirm message">
+          Dismiss message
+        </button>
+    </article>
+  </main>
+
+  <script type="module" src="./src/main.js"></script>
+  <footer class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/hrong1/Newsletter-sign-up-form-with-success-message"
+    target="_blank">Haorong Rong</a>.
+  </footer>
+</body>
+</html>

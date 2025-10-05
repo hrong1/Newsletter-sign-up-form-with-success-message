@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+    --Red: hsl(4, 100%, 67%);
+    --Blue-800: hsl(234, 29%, 20%);
+    --Blue-700: hsl(235, 18%, 26%);
+    --Grey: hsl(0, 0%,58%);
+    --White: hsl(0, 0%, 100%);
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    color: var(--Blue-700);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.page {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-up-image {
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.text-container {
+    max-width: 20rem;
+    margin: 1rem 1rem 1rem;
+}
+
+.sign-up-sheet {
+    justify-content: center;
+    align-items: center;
+}
+
+.success-page{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 20rem;
+    min-height: 100vh;
+    text-align: left;
+}
+
+.icon-success {
+    margin-bottom: 2rem;
+}
+
+.success-title {
+    padding-bottom: 10rem;
+    align-self: start;
+}
+
+.confirm-message {
+    margin-top: 1rem;
+}
+
+.icon-success {
+    align-self: start;
+    max-width: 20%;
+}
+
+.title {
+    font-size: 2.1rem;
+}
+
+.intro {
+    margin: 1rem 0rem 1rem;
+    font-size: 0.8rem;
+}
+
+.dismiss {
+    margin-top: auto;
+    max-width: 100%;
+    padding: 1rem 0rem;
+}
+
+.benefit-list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.benefit-list li {
+    display: flex;
+    align-items: flex-start;
+    font-size: 0.8rem;
+}
+
+.benefit-list li::before {
+    content: '';
+    width: 1rem;
+    height: 1rem;
+    background-image: url('../assets/images/icon-list.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: inline-block;
+    margin-right: 1rem;
+    flex-shrink: 0;
+}
+
+
+
+.prompt-part {
+    font-weight: 700;
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.error-text {
+    color: var(--Red);
+    visibility: hidden;
+}
+
+.error-text.active {
+    visibility: visible;
+}
+
+.submit-place {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.input-box, .click-button {
+    display: block;
+    border-radius: 0.5rem;
+}
+
+.input-box {
+    padding: 1rem 0.5rem;
+}
+
+.click-button {
+    color: var(--White);
+    background-color: var(--Blue-700);
+    text-align: center;
+    font-weight: 700;
+    box-sizing: border-box;
+}
+
+.click-button:hover {
+    background-color: var(--Blue-800);
+    cursor: pointer;
+}
+
+.input-box.active {
+    background-color: hsl(from var(--Red)h s l / 30%);
+    color: var(--Red);
+    border: 0.1rem solid var(--Red)
+}
+
+.submit {
+    flex: 1;
+    margin-top: 1rem;
+    padding: 1rem 0.5rem;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: translateX(-1rem);
+    }
+    20%, 40%, 60%, 80% {
+        transform: translateX(1rem);
+    }
+}
+
+.shake {
+    animation: shake 0.5s ease-in-out;
+}
+
+@media screen and (min-width: 30rem) {
+    body {
+        background-color: var(--Blue-800);
+    }
+
+    .page {
+        background-color: var(--White);
+        border-radius: 1rem;
+    }
+
+    .sign-up-sheet {
+        display: flex;
+        flex-direction: row-reverse;
+        padding-left: 2rem;
+    }
+
+    .title {
+        font-size: 2.75rem;
+    }
+
+    .sign-up-image {
+        padding: 1rem;
+    }
+
+    .success-page {
+        min-height: auto;
+        padding: 2rem;
+    }
+
+    .submit-place {
+        margin-top: 2rem;
+    }
+
+    .dismiss {
+        margin-top: 1rem;
+    }
+
+    .dismiss:hover {
+        background: linear-gradient(to right, var(--Red), orange);
+        border: none;
+    }
+
+}
+
+
+.hidden {
+    display: none;
+}
+
+.attribution { 
+    font-size: 0.5rem; 
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
