@@ -57,15 +57,12 @@ body {
 
 .icon-success {
     margin-bottom: 2rem;
+    align-self: start;
+    max-width: 20%;
 }
 
 .confirm-message {
     margin-top: 1rem;
-}
-
-.icon-success {
-    align-self: start;
-    max-width: 20%;
 }
 
 .title {
@@ -181,6 +178,13 @@ body {
 
 .shake {
     animation: shake 0.5s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .shake {
+    animation: none;
+    transition: none;
+  }
 }
 
 @media screen and (min-width: 30rem) {
